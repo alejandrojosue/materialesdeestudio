@@ -90,9 +90,18 @@ header h5{
 
 @media all and (max-width: 1024px){
 
-	
+	.navegador .col:first-child{
+		width: 40%;
+	}
 
 	header .row:nth-child(2){
 		flex-direction: column;
+	}
+
+	header #comenzar{
+		position: absolute;
+		bottom: 100px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
