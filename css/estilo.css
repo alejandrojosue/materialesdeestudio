@@ -1,0 +1,98 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: tahoma;
+	text-decoration: none;
+}
+
+body{
+	width: 100vw;
+	height: auto;
+	background-color: #A2A2B2;
+}
+
+#contenedor{
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: absolute;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	background: rgb(56,228,238);
+	background: linear-gradient(0deg, rgba(56,228,238,1) 0%, rgba(58,164,215,1) 44%, rgba(78,156,223,1) 64%, rgba(145,69,252,1) 100%);
+	color: white;
+}
+
+header .row{
+	width: 100%;
+	height: auto;
+	padding: 10px 20px;
+	display: flex;
+	text-align: justify;
+}
+
+header .col{
+	width: 100%;
+	display: flex;
+	padding: 10px;
+}
+
+header .navegador{
+	font-size: 1.2em;
+	height: 50px;
+}
+
+.navegador .col:nth-child(2) a{
+	color: #fff;
+	margin:auto;
+}
+
+header .row:nth-child(2) .col:first-child{
+	flex-direction: column;
+	margin: auto;
+}
+
+.row:nth-child(2) .col span:hover{
+	font-weight: bolder;
+}
+
+header img{
+	width: 90%;
+	height: auto;
+	margin: auto;
+	
+}
+
+header h1{
+	font-size: 3.5em;
+}
+
+span#comenzar{
+	position: relative;
+	transform: translateY(100%);
+	border: 1px solid #fff;
+	border-radius: 5px;
+	padding: 5px;
+	margin: auto;
+	cursor: pointer;
+}
+
+header h5{
+	color: rgba(255,255,255, .8);
+}
+
+@media all and (max-width: 1024px){
+
+	
+
+	header .row:nth-child(2){
+		flex-direction: column;
+	}
+}
