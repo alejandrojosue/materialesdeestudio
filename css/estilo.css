@@ -54,13 +54,33 @@ header .navegador{
 	margin:auto;
 }
 
+#menu{
+	background: #fff;
+	border-radius: 50%;
+	color: #8F8E8F;
+	font-size: 25px;
+	line-height: 17px;
+	font-weight: bolder;
+	position: absolute;
+	right: 15px;
+	height: 30px;
+	width: 30px;
+	padding: 5px;
+	margin: 0 auto;
+	transform: translateY(-15%);
+	display: none;
+}
+
+#menu p{
+	font-family: Dosis;
+	font-weight: bolder;
+}
+
+
+
 header .row:nth-child(2) .col:first-child{
 	flex-direction: column;
 	margin: auto;
-}
-
-.row:nth-child(2) .col span:hover{
-	font-weight: bolder;
 }
 
 header img{
@@ -71,7 +91,7 @@ header img{
 }
 
 header h1{
-	font-size: 3.5em;
+	font-size: 3.8em;
 }
 
 span#comenzar{
@@ -90,6 +110,25 @@ header h5{
 
 @media all and (max-width: 1024px){
 
+	header p,h1,h5{
+		text-align: center;
+	}
+
+	header h5{
+		order: 2;
+		padding-bottom: 2rem;
+		font-size: 1.2em;
+	}
+
+	header h1{
+		order:1;
+	}
+
+	header p{
+		order: 3;
+		font-size: 1.4em;
+	}
+
 	.navegador .col:first-child{
 		width: 40%;
 	}
@@ -100,8 +139,90 @@ header h5{
 
 	header #comenzar{
 		position: absolute;
-		bottom: 100px;
+		bottom: 70px;
 		left: 50%;
 		transform: translateX(-50%);
+		font-size: 1.5em;
+	}
+}
+
+@media all and (max-width: 480px){
+	
+	header p{
+		font-size: 1em;
+	}
+
+	header h5{
+		font-size: .9em;
+	}
+
+	header h1{
+		font-size: 2em;
+	}
+
+	.navegador{
+		flex-direction: column;
+	}
+
+	.navegador .col:nth-child(1){
+		width: 100%;
+	}
+
+	.navegador .col:nth-child(2){
+		flex-direction: column;
+		background: #222;
+		z-index: 1;
+		position: absolute;
+		width: 100vw;
+		top: 60px;
+		left: 0;
+	}
+
+
+	.navegador .menuCerrado{
+		display: none;
+	}
+
+	header #comenzar{
+		bottom: 10px;
+		transform: translate(-50%,100%);
+	}
+
+	header .row:nth-child(2){
+		transform: translateY(-5%);
+	}
+
+}
+
+@media all and (max-height: 570px){
+	header .row, .col{
+		padding: 0;
+	}
+
+	header h5{
+		font-size: .8em;
+	}
+
+	header p{
+		font-size: .9rem;
+		line-height: 1em;
+
+	}
+
+	header .navegador span,a{
+		font-size: .8em;
+	}
+
+	#menu{
+		display: block;
+	}
+}
+
+@media all and (max-width: 380px){
+	header .row, .col{
+		padding: 0;
+	}
+	#menu{
+		display: block;
 	}
 }
